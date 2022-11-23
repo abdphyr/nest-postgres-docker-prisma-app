@@ -1,0 +1,14 @@
+version: '4.12.0'
+services:
+  dev-db:
+    image: postgres:15
+    ports:
+      - 5434:5432
+    environment:
+      POSTGRES_USER: nestpg
+      POSTGRES_PASSWORD: nestpg
+      POSTGRES_DB: nestone
+    networks:
+      - abd
+networks:
+  abd:
